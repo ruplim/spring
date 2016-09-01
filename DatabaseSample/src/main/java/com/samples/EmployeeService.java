@@ -1,6 +1,7 @@
 package com.samples;
 
 import java.util.List;
+import java.util.Map;
 
 public class EmployeeService implements Employee {
 
@@ -34,6 +35,11 @@ public class EmployeeService implements Employee {
 	public List<EmployeeDto> getAllEmployee() {
 		
 		return employeeDao.getAllEmployee();
+	}
+
+
+	public List<Map<String, Object>> listAllEmployee() {
+		return employeeDao.listAllEmployee();
 	}
 	
 

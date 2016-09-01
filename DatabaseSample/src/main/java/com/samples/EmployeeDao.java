@@ -3,6 +3,7 @@ package com.samples;
 
 
 import java.util.List;
+import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -51,6 +52,10 @@ public class EmployeeDao {
 		String sql = "select * from X_EMPLOYEE";
 		return getJdbcTemplate().query(sql, new EmployeeMapper());
 	}
-
+	
+	public List<Map<String,Object>> listAllEmployee() {
+		String sql = "select * from X_EMPLOYEE";
+		return getJdbcTemplate().queryForList(sql);
+	}
 	
 }
